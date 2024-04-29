@@ -1,0 +1,1509 @@
+[0m20:12:20.995716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C09F8A61B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C09F8A6660>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C09F8A6DB0>]}
+
+
+============================== 20:12:20.999730 | 4db02584-5ee0-41e1-9b20-27b7e6c5c762 ==============================
+[0m20:12:20.999730 [info ] [MainThread]: Running with dbt=1.7.13
+[0m20:12:21.001237 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m20:12:21.013250 [info ] [MainThread]: dbt version: 1.7.13
+[0m20:12:21.014306 [info ] [MainThread]: python version: 3.12.2
+[0m20:12:21.014306 [info ] [MainThread]: python path: C:\Users\Hp 14s\AppData\Local\Programs\Python\Python312\python.exe
+[0m20:12:21.015777 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m20:12:22.579687 [info ] [MainThread]: Using profiles dir at C:\Users\Hp 14s\.dbt
+[0m20:12:22.581233 [info ] [MainThread]: Using profiles.yml file at C:\Users\Hp 14s\.dbt\profiles.yml
+[0m20:12:22.582243 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Hp 14s\Desktop\WEEKLYTRI\taxitrip\dbt_project.yml
+[0m20:12:22.584401 [info ] [MainThread]: adapter type: bigquery
+[0m20:12:22.584871 [info ] [MainThread]: adapter version: 1.7.7
+[0m20:12:22.694337 [info ] [MainThread]: Configuration:
+[0m20:12:22.695347 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:12:22.696696 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:12:22.697982 [info ] [MainThread]: Required dependencies:
+[0m20:12:22.697982 [debug] [MainThread]: Executing "git --help"
+[0m20:12:22.736709 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:12:22.737717 [debug] [MainThread]: STDERR: "b''"
+[0m20:12:22.737717 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:12:22.739836 [info ] [MainThread]: Connection:
+[0m20:12:22.740922 [info ] [MainThread]:   method: service-account
+[0m20:12:22.742930 [info ] [MainThread]:   database: data-fellowship12-421606
+[0m20:12:22.743867 [info ] [MainThread]:   execution_project: data-fellowship12-421606
+[0m20:12:22.745385 [info ] [MainThread]:   schema: raw
+[0m20:12:22.746421 [info ] [MainThread]:   location: US
+[0m20:12:22.747820 [info ] [MainThread]:   priority: interactive
+[0m20:12:22.747820 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m20:12:22.748831 [info ] [MainThread]:   impersonate_service_account: None
+[0m20:12:22.748831 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m20:12:22.750825 [info ] [MainThread]:   job_retries: 1
+[0m20:12:22.750825 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m20:12:22.751833 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m20:12:22.751833 [info ] [MainThread]:   timeout_seconds: 300
+[0m20:12:22.753291 [info ] [MainThread]:   client_id: None
+[0m20:12:22.754297 [info ] [MainThread]:   token_uri: None
+[0m20:12:22.755300 [info ] [MainThread]:   dataproc_region: None
+[0m20:12:22.756301 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m20:12:22.757298 [info ] [MainThread]:   gcs_bucket: None
+[0m20:12:22.758301 [info ] [MainThread]:   dataproc_batch: None
+[0m20:12:22.759818 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m20:12:22.760935 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m20:12:22.760935 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:12:22.761874 [debug] [MainThread]: BigQuery adapter: Got an error when attempting to create a bigquery client: '[Errno 2] No such file or directory: 'Users/Hp 14s/Desktop/WEEKLYTRI/keytax/executor.json''
+[0m20:12:22.762880 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m20:12:22.763875 [info ] [MainThread]: [31m1 check failed:[0m
+[0m20:12:22.763875 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  [Errno 2] No such file or directory: 'Users/Hp 14s/Desktop/WEEKLYTRI/keytax/executor.json'
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m20:12:22.765903 [debug] [MainThread]: Command `dbt debug` failed at 20:12:22.765903 after 1.94 seconds
+[0m20:12:22.766875 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:12:22.766875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C09F714C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C0B262F890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C09F7A4410>]}
+[0m20:12:22.767875 [debug] [MainThread]: Flushing usage events
+[0m20:14:49.561274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EB0F0B4A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EB0F0B6B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EB0F0B350>]}
+
+
+============================== 20:14:49.564867 | f8949b0b-59d4-4c62-a59c-e5605e724c69 ==============================
+[0m20:14:49.564867 [info ] [MainThread]: Running with dbt=1.7.13
+[0m20:14:49.565867 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:14:49.568927 [info ] [MainThread]: Setting up your profile.
+[0m20:16:31.576045 [info ] [MainThread]: Profile taxitrip written to C:\Users\Hp 14s\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:16:31.580116 [debug] [MainThread]: Command `dbt init` succeeded at 20:16:31.580116 after 102.20 seconds
+[0m20:16:31.581119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EC39CAA20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EB0CAA9C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EC1C96150>]}
+[0m20:16:31.586393 [debug] [MainThread]: Flushing usage events
+[0m20:16:46.370769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275CCE67380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275CCE66510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275CCE65A30>]}
+
+
+============================== 20:16:46.374839 | c6d80314-1616-4737-9dbc-c593bf42cb19 ==============================
+[0m20:16:46.374839 [info ] [MainThread]: Running with dbt=1.7.13
+[0m20:16:46.375839 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt debug', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:16:46.376983 [info ] [MainThread]: dbt version: 1.7.13
+[0m20:16:46.378007 [info ] [MainThread]: python version: 3.12.2
+[0m20:16:46.378007 [info ] [MainThread]: python path: C:\Users\Hp 14s\AppData\Local\Programs\Python\Python312\python.exe
+[0m20:16:46.378781 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m20:16:47.977651 [info ] [MainThread]: Using profiles dir at C:\Users\Hp 14s\.dbt
+[0m20:16:47.978894 [info ] [MainThread]: Using profiles.yml file at C:\Users\Hp 14s\.dbt\profiles.yml
+[0m20:16:47.979903 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Hp 14s\Desktop\WEEKLYTRI\taxitrip\dbt_project.yml
+[0m20:16:47.980903 [info ] [MainThread]: adapter type: bigquery
+[0m20:16:47.982398 [info ] [MainThread]: adapter version: 1.7.7
+[0m20:16:48.077792 [info ] [MainThread]: Configuration:
+[0m20:16:48.078890 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:16:48.079895 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m20:16:48.080783 [info ] [MainThread]: Required dependencies:
+[0m20:16:48.081352 [debug] [MainThread]: Executing "git --help"
+[0m20:16:48.120151 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:16:48.121160 [debug] [MainThread]: STDERR: "b''"
+[0m20:16:48.121160 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:16:48.123473 [info ] [MainThread]: Connection:
+[0m20:16:48.123473 [info ] [MainThread]:   method: service-account
+[0m20:16:48.124475 [info ] [MainThread]:   database: data-fellowship12-421606
+[0m20:16:48.125668 [info ] [MainThread]:   execution_project: data-fellowship12-421606
+[0m20:16:48.125668 [info ] [MainThread]:   schema: raw
+[0m20:16:48.127177 [info ] [MainThread]:   location: US
+[0m20:16:48.127177 [info ] [MainThread]:   priority: interactive
+[0m20:16:48.128454 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m20:16:48.128454 [info ] [MainThread]:   impersonate_service_account: None
+[0m20:16:48.129842 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m20:16:48.129842 [info ] [MainThread]:   job_retries: 1
+[0m20:16:48.130850 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m20:16:48.130850 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m20:16:48.132201 [info ] [MainThread]:   timeout_seconds: 300
+[0m20:16:48.133213 [info ] [MainThread]:   client_id: None
+[0m20:16:48.134213 [info ] [MainThread]:   token_uri: None
+[0m20:16:48.135213 [info ] [MainThread]:   dataproc_region: None
+[0m20:16:48.136220 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m20:16:48.138231 [info ] [MainThread]:   gcs_bucket: None
+[0m20:16:48.140702 [info ] [MainThread]:   dataproc_batch: None
+[0m20:16:48.142219 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m20:16:48.143457 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m20:16:48.144859 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:16:48.202960 [debug] [MainThread]: On debug: select 1 as id
+[0m20:16:50.536401 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:dbfc77f1-0055-4a8c-b425-cb6a79bde377&page=queryresults
+[0m20:16:51.385169 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m20:16:51.385675 [info ] [MainThread]: [32mAll checks passed![0m
+[0m20:16:51.387682 [debug] [MainThread]: Command `dbt debug` succeeded at 20:16:51.387682 after 5.19 seconds
+[0m20:16:51.387682 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:16:51.388691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275CCBB0E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275DFAD6E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000275CCC241D0>]}
+[0m20:16:51.389697 [debug] [MainThread]: Flushing usage events
+[0m20:19:11.896728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221E1C591C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221E1ACF740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221E1C58C20>]}
+
+
+============================== 20:19:11.901249 | 871ace0f-78b8-4479-b405-c5db68949b61 ==============================
+[0m20:19:11.901249 [info ] [MainThread]: Running with dbt=1.7.13
+[0m20:19:11.902258 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt seed --select taxi_tripdata.csv', 'send_anonymous_usage_stats': 'True'}
+[0m20:19:13.951269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '871ace0f-78b8-4479-b405-c5db68949b61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221E1B507D0>]}
+[0m20:19:14.044439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '871ace0f-78b8-4479-b405-c5db68949b61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F478CA40>]}
+[0m20:19:14.047578 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m20:19:14.074025 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m20:19:14.076017 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:19:14.077017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '871ace0f-78b8-4479-b405-c5db68949b61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F44B9700>]}
+[0m20:19:16.668194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '871ace0f-78b8-4479-b405-c5db68949b61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F4E31C10>]}
+[0m20:19:16.704843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '871ace0f-78b8-4479-b405-c5db68949b61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F4F91640>]}
+[0m20:19:16.705603 [info ] [MainThread]: Found 2 models, 1 seed, 4 tests, 0 sources, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m20:19:16.706601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '871ace0f-78b8-4479-b405-c5db68949b61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F4EA0DA0>]}
+[0m20:19:16.709087 [info ] [MainThread]: 
+[0m20:19:16.710082 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m20:19:16.712155 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m20:19:16.713153 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:19:17.826433 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m20:19:17.827456 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:19:18.980078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '871ace0f-78b8-4479-b405-c5db68949b61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F4C1CC80>]}
+[0m20:19:18.982108 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:19:18.985121 [info ] [MainThread]: 
+[0m20:19:19.009758 [debug] [Thread-1 (]: Began running node seed.taxitrip.taxi_tripdata
+[0m20:19:19.011407 [info ] [Thread-1 (]: 1 of 1 START seed file raw.taxi_tripdata ....................................... [RUN]
+[0m20:19:19.012815 [debug] [Thread-1 (]: Acquiring new bigquery connection 'seed.taxitrip.taxi_tripdata'
+[0m20:19:19.014812 [debug] [Thread-1 (]: Began compiling node seed.taxitrip.taxi_tripdata
+[0m20:19:19.015815 [debug] [Thread-1 (]: Timing info for seed.taxitrip.taxi_tripdata (compile): 20:19:19.015815 => 20:19:19.015815
+[0m20:19:19.015815 [debug] [Thread-1 (]: Began executing node seed.taxitrip.taxi_tripdata
+[0m20:19:30.109831 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m20:19:40.109103 [debug] [Thread-1 (]: On seed.taxitrip.taxi_tripdata: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "seed.taxitrip.taxi_tripdata"} */
+
+    alter table `data-fellowship12-421606`.`raw`.`taxi_tripdata` set OPTIONS()
+  
+[0m20:19:40.675302 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:0dd84da0-3d92-44cb-a4e9-32a5712b834b&page=queryresults
+[0m20:19:41.391072 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.taxitrip.taxi_tripdata"
+[0m20:19:41.420612 [debug] [Thread-1 (]: Timing info for seed.taxitrip.taxi_tripdata (execute): 20:19:19.017326 => 20:19:41.419304
+[0m20:19:41.421264 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '871ace0f-78b8-4479-b405-c5db68949b61', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F4F91130>]}
+[0m20:19:41.422271 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file raw.taxi_tripdata ................................... [[32mINSERT 83691[0m in 22.41s]
+[0m20:19:41.424303 [debug] [Thread-1 (]: Finished running node seed.taxitrip.taxi_tripdata
+[0m20:19:41.427629 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:19:41.428637 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m20:19:41.428637 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m20:19:41.429637 [debug] [MainThread]: Connection 'seed.taxitrip.taxi_tripdata' was properly closed.
+[0m20:19:41.429637 [info ] [MainThread]: 
+[0m20:19:41.431682 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 24.72 seconds (24.72s).
+[0m20:19:41.432692 [debug] [MainThread]: Command end result
+[0m20:19:41.443718 [info ] [MainThread]: 
+[0m20:19:41.444729 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:19:41.445727 [info ] [MainThread]: 
+[0m20:19:41.447732 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:19:41.449729 [debug] [MainThread]: Command `dbt seed` succeeded at 20:19:41.449729 after 29.70 seconds
+[0m20:19:41.451237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221F4EFBCB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221E19A2E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000221E19A1E20>]}
+[0m20:19:41.453256 [debug] [MainThread]: Flushing usage events
+[0m18:29:39.992764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021097699A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210975928D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210972BC050>]}
+
+
+============================== 18:29:39.998534 | 23cc7c37-1da7-40c6-8dc5-08fb69003aa2 ==============================
+[0m18:29:39.998534 [info ] [MainThread]: Running with dbt=1.7.13
+[0m18:29:40.000038 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --select monthly_total_passengers', 'send_anonymous_usage_stats': 'True'}
+[0m18:29:44.299954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '23cc7c37-1da7-40c6-8dc5-08fb69003aa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210976BB200>]}
+[0m18:29:44.390279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '23cc7c37-1da7-40c6-8dc5-08fb69003aa2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210AA528EF0>]}
+[0m18:29:44.391887 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m18:29:44.413315 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m18:29:45.885210 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m18:29:45.886210 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\example\monthly_total_passengers.sql
+[0m18:29:46.021778 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.taxitrip.monthly_total_passengers' (models\example\monthly_total_passengers.sql) depends on a node named 'taxi-tripdata' which was not found
+[0m18:29:46.022786 [debug] [MainThread]: Command `dbt run` failed at 18:29:46.022786 after 6.14 seconds
+[0m18:29:46.023785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002109721F0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210A9E39130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000210A9EDCB00>]}
+[0m18:29:46.023785 [debug] [MainThread]: Flushing usage events
+[0m18:31:55.538149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3AB0D8890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3AB0D8D70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3AB0D9B50>]}
+
+
+============================== 18:31:55.543679 | c09d7f7c-7057-4cb8-8e8f-875ede73cabb ==============================
+[0m18:31:55.543679 [info ] [MainThread]: Running with dbt=1.7.13
+[0m18:31:55.544679 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --select monthly_total_passengers.sql', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:31:57.418185 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c09d7f7c-7057-4cb8-8e8f-875ede73cabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3BD753830>]}
+[0m18:31:57.506491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c09d7f7c-7057-4cb8-8e8f-875ede73cabb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3BDF82420>]}
+[0m18:31:57.508496 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m18:31:57.516047 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m18:31:57.583527 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m18:31:57.584519 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\example\monthly_total_passengers.sql
+[0m18:31:57.719103 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.taxitrip.monthly_total_passengers' (models\example\monthly_total_passengers.sql) depends on a node named 'taxi-tripdata' which was not found
+[0m18:31:57.721110 [debug] [MainThread]: Command `dbt run` failed at 18:31:57.721110 after 2.30 seconds
+[0m18:31:57.722207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3AADCAE40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3BDC40410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3BDDDBE90>]}
+[0m18:31:57.722207 [debug] [MainThread]: Flushing usage events
+[0m06:15:35.838582 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E232688F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E22DBD340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E20316360>]}
+
+
+============================== 06:15:35.838582 | fb4e1b29-ad46-47aa-a7a8-5e8e41063777 ==============================
+[0m06:15:35.838582 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:15:35.838582 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --select monthly_total_passengers.sql --full-refresh', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:15:39.479766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fb4e1b29-ad46-47aa-a7a8-5e8e41063777', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E35FC3830>]}
+[0m06:15:39.571484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fb4e1b29-ad46-47aa-a7a8-5e8e41063777', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E35BC6750>]}
+[0m06:15:39.579205 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m06:15:39.595763 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:15:40.699676 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m06:15:40.699676 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\example\monthly_total_passengers.sql
+[0m06:15:40.824329 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.taxitrip.monthly_total_passengers' (models\example\monthly_total_passengers.sql) depends on a node named 'taxi-tripdata' which was not found
+[0m06:15:40.824329 [debug] [MainThread]: Command `dbt run` failed at 06:15:40.824329 after 5.14 seconds
+[0m06:15:40.824329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E22DBD340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E35F302C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027E35CB16D0>]}
+[0m06:15:40.824329 [debug] [MainThread]: Flushing usage events
+[0m06:31:34.748228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F657C3A390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F657A85640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F657C38FE0>]}
+
+
+============================== 06:31:34.748228 | 18195c05-cfe3-4630-80ae-f6fbde27e79a ==============================
+[0m06:31:34.748228 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:31:34.748228 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --full-refresh', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m06:31:36.411699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '18195c05-cfe3-4630-80ae-f6fbde27e79a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F657C3B620>]}
+[0m06:31:36.489824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '18195c05-cfe3-4630-80ae-f6fbde27e79a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F66A907E60>]}
+[0m06:31:36.489824 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m06:31:36.505453 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:31:36.581689 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m06:31:36.581689 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\example\monthly_total_passengers.sql
+[0m06:31:36.698243 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.taxitrip.monthly_total_passengers' (models\example\monthly_total_passengers.sql) depends on a node named 'taxi-tripdata' which was not found
+[0m06:31:36.698243 [debug] [MainThread]: Command `dbt run` failed at 06:31:36.698243 after 2.06 seconds
+[0m06:31:36.698243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F65157FDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F66A990410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F668A7F7D0>]}
+[0m06:31:36.698243 [debug] [MainThread]: Flushing usage events
+[0m06:51:17.633012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABB1D94F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAB828A000>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABAB96900>]}
+
+
+============================== 06:51:17.633012 | 51868955-bd5d-476e-b147-169015ef0031 ==============================
+[0m06:51:17.633012 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:51:17.633012 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --full-refresh', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m06:51:19.810119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABB1FA870>]}
+[0m06:51:19.935130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACE06EFF0>]}
+[0m06:51:19.935130 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m06:51:19.956018 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:51:20.060342 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m06:51:20.060342 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\example\monthly_total_passengers.sql
+[0m06:51:20.240392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABB1D8740>]}
+[0m06:51:20.287652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACE116960>]}
+[0m06:51:20.290424 [info ] [MainThread]: Found 3 models, 1 seed, 4 tests, 0 sources, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m06:51:20.290424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACE2CA630>]}
+[0m06:51:20.293677 [info ] [MainThread]: 
+[0m06:51:20.298734 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m06:51:20.301914 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m06:51:20.302421 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:51:21.743965 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m06:51:21.743965 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m06:51:23.272131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACE2B2060>]}
+[0m06:51:23.272131 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m06:51:23.272131 [info ] [MainThread]: 
+[0m06:51:23.299746 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m06:51:23.299746 [info ] [Thread-1 (]: 1 of 3 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m06:51:23.307145 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m06:51:23.307145 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m06:51:23.319887 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m06:51:23.333177 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 06:51:23.307145 => 06:51:23.333177
+[0m06:51:23.333177 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m06:51:23.401513 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m06:51:23.412217 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m06:51:23.465527 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    SUM(passenger_count) AS TotalPassengers
+FROM 
+    `data-fellowship12-421606.raw.taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime), EXTRACT(MONTH FROM lpep_pickup_datetime)
+ORDER BY 
+    Year, Month;
+    );
+  
+[0m06:51:25.007835 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:bae41864-1872-49fb-bc3c-46fe0bf3ac28&page=queryresults
+[0m06:51:25.011852 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got ";" at [24:16]; reason: invalidQuery, location: query, message: Syntax error: Expected ")" but got ";" at [24:16]')
+[0m06:51:25.928559 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:82f05ec2-cf11-4592-8c2a-37787eb17e53&page=queryresults
+[0m06:51:25.928559 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:82f05ec2-cf11-4592-8c2a-37787eb17e53&page=queryresults
+[0m06:51:25.928559 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 06:51:23.333177 => 06:51:25.928559
+[0m06:51:26.177789 [debug] [Thread-1 (]: Database Error in model monthly_total_passengers (models\example\monthly_total_passengers.sql)
+  Syntax error: Expected ")" but got ";" at [24:16]
+  compiled Code at target\run\taxitrip\models\example\monthly_total_passengers.sql
+[0m06:51:26.177789 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABA6163F0>]}
+[0m06:51:26.177789 [error] [Thread-1 (]: 1 of 3 ERROR creating sql table model raw.monthly_total_passengers ............. [[31mERROR[0m in 2.87s]
+[0m06:51:26.193404 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m06:51:26.193404 [debug] [Thread-1 (]: Began running node model.taxitrip.my_first_dbt_model
+[0m06:51:26.193404 [info ] [Thread-1 (]: 2 of 3 START sql table model raw.my_first_dbt_model ............................ [RUN]
+[0m06:51:26.193404 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.monthly_total_passengers, now model.taxitrip.my_first_dbt_model)
+[0m06:51:26.201446 [debug] [Thread-1 (]: Began compiling node model.taxitrip.my_first_dbt_model
+[0m06:51:26.209684 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.my_first_dbt_model"
+[0m06:51:26.212065 [debug] [Thread-1 (]: Timing info for model.taxitrip.my_first_dbt_model (compile): 06:51:26.202175 => 06:51:26.209684
+[0m06:51:26.212065 [debug] [Thread-1 (]: Began executing node model.taxitrip.my_first_dbt_model
+[0m06:51:26.220090 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.my_first_dbt_model"
+[0m06:51:26.228829 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m06:51:26.292471 [debug] [Thread-1 (]: On model.taxitrip.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.my_first_dbt_model"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`my_first_dbt_model`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+[0m06:51:27.983993 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:140aaa82-6822-4b29-9f9d-bd17d3788e35&page=queryresults
+[0m06:51:30.559924 [debug] [Thread-1 (]: Timing info for model.taxitrip.my_first_dbt_model (execute): 06:51:26.212065 => 06:51:30.559924
+[0m06:51:30.559924 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACE379C40>]}
+[0m06:51:30.559924 [info ] [Thread-1 (]: 2 of 3 OK created sql table model raw.my_first_dbt_model ....................... [[32mCREATE TABLE (2.0 rows, 0 processed)[0m in 4.37s]
+[0m06:51:30.559924 [debug] [Thread-1 (]: Finished running node model.taxitrip.my_first_dbt_model
+[0m06:51:30.559924 [debug] [Thread-1 (]: Began running node model.taxitrip.my_second_dbt_model
+[0m06:51:30.559924 [info ] [Thread-1 (]: 3 of 3 START sql view model raw.my_second_dbt_model ............................ [RUN]
+[0m06:51:30.559924 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.my_first_dbt_model, now model.taxitrip.my_second_dbt_model)
+[0m06:51:30.575554 [debug] [Thread-1 (]: Began compiling node model.taxitrip.my_second_dbt_model
+[0m06:51:30.583618 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.my_second_dbt_model"
+[0m06:51:30.599750 [debug] [Thread-1 (]: Timing info for model.taxitrip.my_second_dbt_model (compile): 06:51:30.576767 => 06:51:30.599750
+[0m06:51:30.599750 [debug] [Thread-1 (]: Began executing node model.taxitrip.my_second_dbt_model
+[0m06:51:30.631086 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.my_second_dbt_model"
+[0m06:51:30.631086 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m06:51:30.712587 [debug] [Thread-1 (]: On model.taxitrip.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.my_second_dbt_model"} */
+
+
+  create or replace view `data-fellowship12-421606`.`raw`.`my_second_dbt_model`
+  OPTIONS()
+  as -- Use the `ref` function to select from other models
+
+select *
+from `data-fellowship12-421606`.`raw`.`my_first_dbt_model`
+where id = 1;
+
+
+[0m06:51:32.380575 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:57895dfe-ef8c-4e9e-86fd-aaeb69cf09d9&page=queryresults
+[0m06:51:33.404476 [debug] [Thread-1 (]: Timing info for model.taxitrip.my_second_dbt_model (execute): 06:51:30.599750 => 06:51:33.404476
+[0m06:51:33.411892 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '51868955-bd5d-476e-b147-169015ef0031', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACE81FD10>]}
+[0m06:51:33.413461 [info ] [Thread-1 (]: 3 of 3 OK created sql view model raw.my_second_dbt_model ....................... [[32mCREATE VIEW (0 processed)[0m in 2.85s]
+[0m06:51:33.414931 [debug] [Thread-1 (]: Finished running node model.taxitrip.my_second_dbt_model
+[0m06:51:33.414931 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m06:51:33.414931 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m06:51:33.420945 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m06:51:33.420945 [debug] [MainThread]: Connection 'model.taxitrip.my_second_dbt_model' was properly closed.
+[0m06:51:33.420945 [info ] [MainThread]: 
+[0m06:51:33.425127 [info ] [MainThread]: Finished running 2 table models, 1 view model in 0 hours 0 minutes and 13.12 seconds (13.12s).
+[0m06:51:33.426489 [debug] [MainThread]: Command end result
+[0m06:51:33.442655 [info ] [MainThread]: 
+[0m06:51:33.443792 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m06:51:33.447430 [info ] [MainThread]: 
+[0m06:51:33.449575 [error] [MainThread]:   Database Error in model monthly_total_passengers (models\example\monthly_total_passengers.sql)
+  Syntax error: Expected ")" but got ";" at [24:16]
+  compiled Code at target\run\taxitrip\models\example\monthly_total_passengers.sql
+[0m06:51:33.455606 [info ] [MainThread]: 
+[0m06:51:33.455606 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+[0m06:51:33.460052 [debug] [MainThread]: Command `dbt run` failed at 06:51:33.460052 after 16.03 seconds
+[0m06:51:33.461860 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACE26F230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACE040710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CABAFC5EB0>]}
+[0m06:51:33.461860 [debug] [MainThread]: Flushing usage events
+[0m06:59:55.221931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E308BBAF30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E308BBACC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E308BBAC60>]}
+
+
+============================== 06:59:55.237539 | 003ccf7d-0854-4476-815e-a69a7d2958f7 ==============================
+[0m06:59:55.237539 [info ] [MainThread]: Running with dbt=1.7.13
+[0m06:59:55.237539 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --full-refresh', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m06:59:57.183294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '003ccf7d-0854-4476-815e-a69a7d2958f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31B7DA090>]}
+[0m06:59:57.286487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '003ccf7d-0854-4476-815e-a69a7d2958f7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31B8B4E60>]}
+[0m06:59:57.286487 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m06:59:57.300998 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m06:59:57.427894 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m06:59:57.427894 [debug] [MainThread]: Partial parsing: updated file: taxitrip://models\example\monthly_total_passengers.sql
+[0m06:59:57.586688 [error] [MainThread]: Encountered an error:
+Compilation Error in model monthly_total_passengers (models\example\monthly_total_passengers.sql)
+  expected token ')', got 'string'
+    line 9
+      {{(ref 'taxi_tripdata')}}
+[0m06:59:57.586688 [debug] [MainThread]: Command `dbt run` failed at 06:59:57.586688 after 2.49 seconds
+[0m06:59:57.586688 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E308BB9DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31BC94530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E31B9F8410>]}
+[0m06:59:57.586688 [debug] [MainThread]: Flushing usage events
+[0m07:08:36.855949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256D6FE8EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256D08FEF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256D6EA8EF0>]}
+
+
+============================== 07:08:36.871585 | 603cba54-5473-4356-b91c-778f213fc3cf ==============================
+[0m07:08:36.871585 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:08:36.871585 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --full-refresh', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:08:38.660598 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '603cba54-5473-4356-b91c-778f213fc3cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256D6395430>]}
+[0m07:08:38.754341 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '603cba54-5473-4356-b91c-778f213fc3cf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256E9DD2270>]}
+[0m07:08:38.754341 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:08:38.769910 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:08:38.879435 [debug] [MainThread]: Partial parsing enabled: 4 files deleted, 2 files added, 0 files changed.
+[0m07:08:38.884986 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\sources\monthly_total_passengers.sql
+[0m07:08:38.884986 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\sources\raw.yml
+[0m07:08:38.884986 [debug] [MainThread]: Partial parsing: deleted file: taxitrip://models\example\my_first_dbt_model.sql
+[0m07:08:38.884986 [debug] [MainThread]: Partial parsing: deleted file: taxitrip://models\example\my_second_dbt_model.sql
+[0m07:08:38.884986 [debug] [MainThread]: Partial parsing: deleted file: taxitrip://models\example\monthly_total_passengers.sql
+[0m07:08:39.010600 [error] [MainThread]: Encountered an error:
+Compilation Error in model monthly_total_passengers (models\sources\monthly_total_passengers.sql)
+  expected token ')', got 'string'
+    line 13
+      {{(ref 'taxi_tripdata')}}
+[0m07:08:39.010600 [debug] [MainThread]: Command `dbt run` failed at 07:08:39.010600 after 2.27 seconds
+[0m07:08:39.010600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256D6AB0BF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256E9E6EE40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000256E9E974D0>]}
+[0m07:08:39.010600 [debug] [MainThread]: Flushing usage events
+[0m07:12:24.922484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB0FB18E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB0CBCA2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB0FB18380>]}
+
+
+============================== 07:12:24.922484 | 3748b05f-6019-43f0-ac81-482ab0fd3ce9 ==============================
+[0m07:12:24.922484 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:12:24.922484 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --full-refresh', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:12:26.712956 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3748b05f-6019-43f0-ac81-482ab0fd3ce9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB0CBCA2D0>]}
+[0m07:12:26.807206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3748b05f-6019-43f0-ac81-482ab0fd3ce9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB224741A0>]}
+[0m07:12:26.807206 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:12:26.831263 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:12:26.843578 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m07:12:26.843578 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '3748b05f-6019-43f0-ac81-482ab0fd3ce9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB228FA9C0>]}
+[0m07:12:27.733575 [error] [MainThread]: Encountered an error:
+Compilation Error in model monthly_total_passengers (models\sources\monthly_total_passengers.sql)
+  expected token ')', got 'string'
+    line 13
+      {{ (ref'taxi_tripdata') }}
+[0m07:12:27.733575 [debug] [MainThread]: Command `dbt run` failed at 07:12:27.733575 after 2.94 seconds
+[0m07:12:27.752088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB0F9EEC00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB22B31DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FB2299EF30>]}
+[0m07:12:27.759600 [debug] [MainThread]: Flushing usage events
+[0m07:13:16.113982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203BC6080B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203BC3F4530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203BB4B4AD0>]}
+
+
+============================== 07:13:16.118088 | f25b7229-91c3-44ba-a828-01a2e60ab4e6 ==============================
+[0m07:13:16.118088 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:13:16.118088 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt run --full-refresh', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m07:13:17.872171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f25b7229-91c3-44ba-a828-01a2e60ab4e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203CF0F6BA0>]}
+[0m07:13:17.982305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f25b7229-91c3-44ba-a828-01a2e60ab4e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203CF2531A0>]}
+[0m07:13:17.982305 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:13:17.998020 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:13:17.998020 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m07:13:18.014492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f25b7229-91c3-44ba-a828-01a2e60ab4e6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203CF3DE9C0>]}
+[0m07:13:19.123714 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Invalid sources config given in models\sources\raw.yml @ sources: {'name': 'raw', 'tables': {'-name': 'taxi_tripdata'}} - at path ['tables']: {'-name': 'taxi_tripdata'} is not of type 'array'
+[0m07:13:19.123714 [debug] [MainThread]: Command `dbt run` failed at 07:13:19.123714 after 3.13 seconds
+[0m07:13:19.123714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203BB9E9DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203CF3A32C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203CF4C2C60>]}
+[0m07:13:19.123714 [debug] [MainThread]: Flushing usage events
+[0m07:22:57.182803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C931C7ADE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C931C7AA80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C931C7A8D0>]}
+
+
+============================== 07:22:57.182803 | b2f9861d-4eff-4260-ae78-5c77ebdc3638 ==============================
+[0m07:22:57.182803 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:22:57.190907 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --full-refresh', 'send_anonymous_usage_stats': 'True'}
+[0m07:22:59.049311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b2f9861d-4eff-4260-ae78-5c77ebdc3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C931C79190>]}
+[0m07:22:59.144047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b2f9861d-4eff-4260-ae78-5c77ebdc3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944A03110>]}
+[0m07:22:59.144047 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:22:59.159152 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:22:59.177230 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m07:22:59.177593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b2f9861d-4eff-4260-ae78-5c77ebdc3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944B569C0>]}
+[0m07:23:00.331553 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b2f9861d-4eff-4260-ae78-5c77ebdc3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944DD90A0>]}
+[0m07:23:00.355405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b2f9861d-4eff-4260-ae78-5c77ebdc3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944EC8CB0>]}
+[0m07:23:00.355405 [info ] [MainThread]: Found 1 model, 1 seed, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m07:23:00.355405 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b2f9861d-4eff-4260-ae78-5c77ebdc3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944CF2E10>]}
+[0m07:23:00.363508 [info ] [MainThread]: 
+[0m07:23:00.368312 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:23:00.368312 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m07:23:00.368312 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:23:01.867471 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m07:23:01.867471 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:23:03.508366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b2f9861d-4eff-4260-ae78-5c77ebdc3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944BB7E60>]}
+[0m07:23:03.508366 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:23:03.508366 [info ] [MainThread]: 
+[0m07:23:03.584710 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m07:23:03.584710 [info ] [Thread-1 (]: 1 of 1 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m07:23:03.584710 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m07:23:03.584710 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m07:23:03.599980 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m07:23:03.599980 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 07:23:03.584710 => 07:23:03.599980
+[0m07:23:03.599980 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m07:23:03.661358 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m07:23:03.666614 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:23:03.717366 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    SUM(passenger_count) AS TotalPassengers
+FROM  
+
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime), EXTRACT(MONTH FROM lpep_pickup_datetime)
+ORDER BY 
+    Year, Month;
+    );
+  
+[0m07:23:05.349177 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:0cd4782e-a743-42f8-a680-61657c30fc28&page=queryresults
+[0m07:23:05.349177 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got ";" at [26:16]; reason: invalidQuery, location: query, message: Syntax error: Expected ")" but got ";" at [26:16]')
+[0m07:23:06.782834 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:47226536-3532-495a-ae47-510e33046c70&page=queryresults
+[0m07:23:06.782834 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:47226536-3532-495a-ae47-510e33046c70&page=queryresults
+[0m07:23:06.797846 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 07:23:03.599980 => 07:23:06.797846
+[0m07:23:06.797846 [debug] [Thread-1 (]: Database Error in model monthly_total_passengers (models\sources\monthly_total_passengers.sql)
+  Syntax error: Expected ")" but got ";" at [26:16]
+  compiled Code at target\run\taxitrip\models\sources\monthly_total_passengers.sql
+[0m07:23:06.797846 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b2f9861d-4eff-4260-ae78-5c77ebdc3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944BE4080>]}
+[0m07:23:06.813487 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model raw.monthly_total_passengers ............. [[31mERROR[0m in 3.21s]
+[0m07:23:06.814943 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m07:23:06.814943 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:23:06.821957 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m07:23:06.822683 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m07:23:06.822683 [debug] [MainThread]: Connection 'model.taxitrip.monthly_total_passengers' was properly closed.
+[0m07:23:06.824058 [info ] [MainThread]: 
+[0m07:23:06.824058 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 6.46 seconds (6.46s).
+[0m07:23:06.824058 [debug] [MainThread]: Command end result
+[0m07:23:06.838246 [info ] [MainThread]: 
+[0m07:23:06.844014 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m07:23:06.844014 [info ] [MainThread]: 
+[0m07:23:06.847305 [error] [MainThread]:   Database Error in model monthly_total_passengers (models\sources\monthly_total_passengers.sql)
+  Syntax error: Expected ")" but got ";" at [26:16]
+  compiled Code at target\run\taxitrip\models\sources\monthly_total_passengers.sql
+[0m07:23:06.849858 [info ] [MainThread]: 
+[0m07:23:06.849858 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m07:23:06.849858 [debug] [MainThread]: Command `dbt run` failed at 07:23:06.849858 after 9.79 seconds
+[0m07:23:06.849858 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C9312AD2E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944BE4080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C944C695E0>]}
+[0m07:23:06.849858 [debug] [MainThread]: Flushing usage events
+[0m07:24:30.502557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002294F399FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002294F08EED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002294F08DE20>]}
+
+
+============================== 07:24:30.502557 | 3454c838-3b5e-4a8a-9be4-aa2acbb8596e ==============================
+[0m07:24:30.502557 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:24:30.502557 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --full-refresh', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:24:32.353350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3454c838-3b5e-4a8a-9be4-aa2acbb8596e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022961FE3770>]}
+[0m07:24:32.456898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3454c838-3b5e-4a8a-9be4-aa2acbb8596e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229620A70E0>]}
+[0m07:24:32.456898 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:24:32.475349 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:24:32.587912 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m07:24:32.587912 [debug] [MainThread]: Partial parsing: updated file: taxitrip://models\sources\monthly_total_passengers.sql
+[0m07:24:32.731168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3454c838-3b5e-4a8a-9be4-aa2acbb8596e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022961E460C0>]}
+[0m07:24:32.746282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3454c838-3b5e-4a8a-9be4-aa2acbb8596e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229622EBC80>]}
+[0m07:24:32.746282 [info ] [MainThread]: Found 1 seed, 1 model, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m07:24:32.746282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3454c838-3b5e-4a8a-9be4-aa2acbb8596e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022961B07C20>]}
+[0m07:24:32.762021 [info ] [MainThread]: 
+[0m07:24:32.769310 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:24:32.772440 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m07:24:32.772440 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:24:34.321375 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m07:24:34.321375 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:24:35.861819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3454c838-3b5e-4a8a-9be4-aa2acbb8596e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002294EF1B0B0>]}
+[0m07:24:35.861819 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:24:35.861819 [info ] [MainThread]: 
+[0m07:24:35.890162 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m07:24:35.897867 [info ] [Thread-1 (]: 1 of 1 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m07:24:35.897867 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m07:24:35.907056 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m07:24:35.917990 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m07:24:35.917990 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 07:24:35.907056 => 07:24:35.917990
+[0m07:24:35.917990 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m07:24:35.983020 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m07:24:35.983020 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:24:36.045016 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM 'lpep_pickup_datetime') AS Year,
+    EXTRACT(MONTH FROM 'lpep_pickup_datetime') AS Month,
+    SUM (passenger_count) AS TotalPassengers
+FROM  
+
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+
+GROUP BY 
+    EXTRACT(YEAR FROM 'lpep_pickup_datetime' ), EXTRACT (MONTH FROM 'lpep_pickup_datetime')
+ORDER BY 
+    Year, Month;
+    );
+  
+[0m07:24:37.289155 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:bd2df1bb-d8cc-434e-a234-31f0d242af1b&page=queryresults
+[0m07:24:37.304629 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got ";" at [26:16]; reason: invalidQuery, location: query, message: Syntax error: Expected ")" but got ";" at [26:16]')
+[0m07:24:38.530275 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:a35de203-1af5-4d5d-a6f0-7c100177a458&page=queryresults
+[0m07:24:38.536391 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:a35de203-1af5-4d5d-a6f0-7c100177a458&page=queryresults
+[0m07:24:38.539412 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 07:24:35.917990 => 07:24:38.539412
+[0m07:24:38.547709 [debug] [Thread-1 (]: Database Error in model monthly_total_passengers (models\sources\monthly_total_passengers.sql)
+  Syntax error: Expected ")" but got ";" at [26:16]
+  compiled Code at target\run\taxitrip\models\sources\monthly_total_passengers.sql
+[0m07:24:38.547709 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3454c838-3b5e-4a8a-9be4-aa2acbb8596e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022961FA7320>]}
+[0m07:24:38.547709 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model raw.monthly_total_passengers ............. [[31mERROR[0m in 2.65s]
+[0m07:24:38.547709 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m07:24:38.565613 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:24:38.565613 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m07:24:38.571148 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m07:24:38.571148 [debug] [MainThread]: Connection 'model.taxitrip.monthly_total_passengers' was properly closed.
+[0m07:24:38.571148 [info ] [MainThread]: 
+[0m07:24:38.574611 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 5.81 seconds (5.81s).
+[0m07:24:38.574611 [debug] [MainThread]: Command end result
+[0m07:24:38.597722 [info ] [MainThread]: 
+[0m07:24:38.597722 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m07:24:38.605348 [info ] [MainThread]: 
+[0m07:24:38.608828 [error] [MainThread]:   Database Error in model monthly_total_passengers (models\sources\monthly_total_passengers.sql)
+  Syntax error: Expected ")" but got ";" at [26:16]
+  compiled Code at target\run\taxitrip\models\sources\monthly_total_passengers.sql
+[0m07:24:38.608828 [info ] [MainThread]: 
+[0m07:24:38.608828 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m07:24:38.613652 [debug] [MainThread]: Command `dbt run` failed at 07:24:38.613652 after 8.28 seconds
+[0m07:24:38.615208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002294F08EED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229620A5C40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002294F28CB90>]}
+[0m07:24:38.615208 [debug] [MainThread]: Flushing usage events
+[0m07:26:05.642388 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFF014B050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFF014AF60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFF014AE40>]}
+
+
+============================== 07:26:05.642388 | 41dd9480-d924-497c-b513-f566c89ec60e ==============================
+[0m07:26:05.642388 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:26:05.642388 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt run --full-refresh', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:26:07.415901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '41dd9480-d924-497c-b513-f566c89ec60e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFF014ACF0>]}
+[0m07:26:07.510993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '41dd9480-d924-497c-b513-f566c89ec60e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF83047B90>]}
+[0m07:26:07.510993 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:26:07.530915 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:26:07.623027 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m07:26:07.623027 [debug] [MainThread]: Partial parsing: updated file: taxitrip://models\sources\monthly_total_passengers.sql
+[0m07:26:07.772784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '41dd9480-d924-497c-b513-f566c89ec60e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF82E942C0>]}
+[0m07:26:07.788412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '41dd9480-d924-497c-b513-f566c89ec60e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF830CE4B0>]}
+[0m07:26:07.788412 [info ] [MainThread]: Found 1 seed, 1 model, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m07:26:07.788412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '41dd9480-d924-497c-b513-f566c89ec60e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF830CE390>]}
+[0m07:26:07.788412 [info ] [MainThread]: 
+[0m07:26:07.800831 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:26:07.803361 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m07:26:07.803361 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:26:09.318987 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m07:26:09.318987 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:26:10.564674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '41dd9480-d924-497c-b513-f566c89ec60e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF83279F40>]}
+[0m07:26:10.567058 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:26:10.568575 [info ] [MainThread]: 
+[0m07:26:10.571060 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m07:26:10.571060 [info ] [Thread-1 (]: 1 of 1 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m07:26:10.578915 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m07:26:10.580190 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m07:26:10.605656 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m07:26:10.611285 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 07:26:10.583218 => 07:26:10.605656
+[0m07:26:10.611285 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m07:26:10.677506 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m07:26:10.677506 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:26:10.742817 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    SUM(passenger_count) AS TotalPassengers
+FROM  
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime), EXTRACT(MONTH FROM lpep_pickup_datetime)
+ORDER BY 
+    Year, Month;
+    );
+  
+[0m07:26:11.886099 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:44e7e755-d854-4b59-9689-f7cd830ee6b8&page=queryresults
+[0m07:26:11.889114 [debug] [Thread-1 (]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got ";" at [24:16]; reason: invalidQuery, location: query, message: Syntax error: Expected ")" but got ";" at [24:16]')
+[0m07:26:12.383983 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:d6282a39-5a93-4ebf-a0f8-492c63c8eb18&page=queryresults
+[0m07:26:12.383983 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:d6282a39-5a93-4ebf-a0f8-492c63c8eb18&page=queryresults
+[0m07:26:12.383983 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 07:26:10.612851 => 07:26:12.383983
+[0m07:26:12.396852 [debug] [Thread-1 (]: Database Error in model monthly_total_passengers (models\sources\monthly_total_passengers.sql)
+  Syntax error: Expected ")" but got ";" at [24:16]
+  compiled Code at target\run\taxitrip\models\sources\monthly_total_passengers.sql
+[0m07:26:12.396852 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '41dd9480-d924-497c-b513-f566c89ec60e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF83046030>]}
+[0m07:26:12.396852 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model raw.monthly_total_passengers ............. [[31mERROR[0m in 1.83s]
+[0m07:26:12.396852 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m07:26:12.396852 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:26:12.396852 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m07:26:12.396852 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m07:26:12.396852 [debug] [MainThread]: Connection 'model.taxitrip.monthly_total_passengers' was properly closed.
+[0m07:26:12.396852 [info ] [MainThread]: 
+[0m07:26:12.412127 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 4.60 seconds (4.60s).
+[0m07:26:12.412127 [debug] [MainThread]: Command end result
+[0m07:26:12.460768 [info ] [MainThread]: 
+[0m07:26:12.460768 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m07:26:12.463446 [info ] [MainThread]: 
+[0m07:26:12.466742 [error] [MainThread]:   Database Error in model monthly_total_passengers (models\sources\monthly_total_passengers.sql)
+  Syntax error: Expected ")" but got ";" at [24:16]
+  compiled Code at target\run\taxitrip\models\sources\monthly_total_passengers.sql
+[0m07:26:12.470508 [info ] [MainThread]: 
+[0m07:26:12.470508 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m07:26:12.470508 [debug] [MainThread]: Command `dbt run` failed at 07:26:12.470508 after 6.98 seconds
+[0m07:26:12.470508 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFEFF1BF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AF82F5D6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001AFF00130E0>]}
+[0m07:26:12.470508 [debug] [MainThread]: Flushing usage events
+[0m07:26:34.004903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163C7C087D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163C7C09730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163C7C0A390>]}
+
+
+============================== 07:26:34.004903 | 8f0295dd-2ede-43ce-a06c-ed8140dec19d ==============================
+[0m07:26:34.004903 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:26:34.004903 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --full-refresh', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:26:35.761122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8f0295dd-2ede-43ce-a06c-ed8140dec19d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163DA8B79B0>]}
+[0m07:26:35.870505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8f0295dd-2ede-43ce-a06c-ed8140dec19d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163DA885EB0>]}
+[0m07:26:35.870505 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:26:35.870505 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:26:35.986687 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m07:26:35.986687 [debug] [MainThread]: Partial parsing: updated file: taxitrip://models\sources\monthly_total_passengers.sql
+[0m07:26:36.145178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8f0295dd-2ede-43ce-a06c-ed8140dec19d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163DAAB4C80>]}
+[0m07:26:36.170061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8f0295dd-2ede-43ce-a06c-ed8140dec19d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163DAB52570>]}
+[0m07:26:36.170061 [info ] [MainThread]: Found 1 seed, 1 model, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m07:26:36.170061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f0295dd-2ede-43ce-a06c-ed8140dec19d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163DAA2ACF0>]}
+[0m07:26:36.176499 [info ] [MainThread]: 
+[0m07:26:36.179029 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:26:36.179029 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m07:26:36.179029 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:26:37.861000 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m07:26:37.861000 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:26:39.676521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8f0295dd-2ede-43ce-a06c-ed8140dec19d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163DACFCC80>]}
+[0m07:26:39.676521 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:26:39.676521 [info ] [MainThread]: 
+[0m07:26:39.737982 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m07:26:39.737982 [info ] [Thread-1 (]: 1 of 1 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m07:26:39.737982 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m07:26:39.737982 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m07:26:39.746899 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m07:26:39.761912 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 07:26:39.737982 => 07:26:39.746899
+[0m07:26:39.763787 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m07:26:39.825511 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m07:26:39.829793 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:26:39.881867 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    SUM(passenger_count) AS TotalPassengers
+FROM  
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime), EXTRACT(MONTH FROM lpep_pickup_datetime)
+ORDER BY 
+    Year, Month
+    );
+  
+[0m07:26:42.089699 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:7c0825ec-ed9f-4bf8-9981-21312c512a40&page=queryresults
+[0m07:26:43.994198 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 07:26:39.763787 => 07:26:43.994198
+[0m07:26:43.994198 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8f0295dd-2ede-43ce-a06c-ed8140dec19d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163C7BDBC50>]}
+[0m07:26:43.994198 [info ] [Thread-1 (]: 1 of 1 OK created sql table model raw.monthly_total_passengers ................. [[32mCREATE TABLE (5.0 rows, 1.0 MiB processed)[0m in 4.26s]
+[0m07:26:44.002154 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m07:26:44.002154 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:26:44.002154 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m07:26:44.002154 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m07:26:44.002154 [debug] [MainThread]: Connection 'model.taxitrip.monthly_total_passengers' was properly closed.
+[0m07:26:44.010166 [info ] [MainThread]: 
+[0m07:26:44.013551 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 7.83 seconds (7.83s).
+[0m07:26:44.014106 [debug] [MainThread]: Command end result
+[0m07:26:44.046751 [info ] [MainThread]: 
+[0m07:26:44.046751 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:26:44.054478 [info ] [MainThread]: 
+[0m07:26:44.055186 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m07:26:44.056767 [debug] [MainThread]: Command `dbt run` succeeded at 07:26:44.056767 after 10.16 seconds
+[0m07:26:44.056767 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163C7789B80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163DA7AD850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000163DA377650>]}
+[0m07:26:44.058697 [debug] [MainThread]: Flushing usage events
+[0m07:41:18.551912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002992D4AA330>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002992D4A9010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002992D4A8DA0>]}
+
+
+============================== 07:41:18.551912 | 79579017-05d4-4bea-8155-b13642e488a8 ==============================
+[0m07:41:18.551912 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:41:18.551912 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run --full-refresh', 'send_anonymous_usage_stats': 'True'}
+[0m07:41:20.292808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '79579017-05d4-4bea-8155-b13642e488a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002992D4C9460>]}
+[0m07:41:20.340207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '79579017-05d4-4bea-8155-b13642e488a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029940377380>]}
+[0m07:41:20.340207 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:41:20.355833 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:41:20.454526 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m07:41:20.455529 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\sources\monthly_transactions_payment_type.sql
+[0m07:41:20.544407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '79579017-05d4-4bea-8155-b13642e488a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299405A8D40>]}
+[0m07:41:20.544407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '79579017-05d4-4bea-8155-b13642e488a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299404042F0>]}
+[0m07:41:20.544407 [info ] [MainThread]: Found 1 seed, 2 models, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m07:41:20.560037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '79579017-05d4-4bea-8155-b13642e488a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029940553B00>]}
+[0m07:41:20.560037 [info ] [MainThread]: 
+[0m07:41:20.566715 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:41:20.566715 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m07:41:20.566715 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:41:21.610791 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m07:41:21.610791 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:41:22.569460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '79579017-05d4-4bea-8155-b13642e488a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029940433EF0>]}
+[0m07:41:22.569460 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:41:22.575879 [info ] [MainThread]: 
+[0m07:41:22.590968 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m07:41:22.591967 [info ] [Thread-1 (]: 1 of 2 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m07:41:22.594979 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m07:41:22.595976 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m07:41:22.602449 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m07:41:22.602449 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 07:41:22.595976 => 07:41:22.602449
+[0m07:41:22.603449 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m07:41:22.616855 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:41:23.525116 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m07:41:23.525116 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    SUM(passenger_count) AS TotalPassengers
+FROM  
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime), EXTRACT(MONTH FROM lpep_pickup_datetime)
+ORDER BY 
+    Year, Month
+    );
+  
+[0m07:41:24.291174 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:f7c53fa8-5765-4910-ba64-de8338c9aa92&page=queryresults
+[0m07:41:26.895108 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 07:41:22.603449 => 07:41:26.895108
+[0m07:41:26.895108 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '79579017-05d4-4bea-8155-b13642e488a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299405A8650>]}
+[0m07:41:26.895108 [info ] [Thread-1 (]: 1 of 2 OK created sql table model raw.monthly_total_passengers ................. [[32mCREATE TABLE (5.0 rows, 1.0 MiB processed)[0m in 4.30s]
+[0m07:41:26.895108 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m07:41:26.895108 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_transactions_payment_type
+[0m07:41:26.895108 [info ] [Thread-1 (]: 2 of 2 START sql table model raw.monthly_transactions_payment_type ............. [RUN]
+[0m07:41:26.895108 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.monthly_total_passengers, now model.taxitrip.monthly_transactions_payment_type)
+[0m07:41:26.895108 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_transactions_payment_type
+[0m07:41:26.910735 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_transactions_payment_type"
+[0m07:41:26.910735 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_transactions_payment_type (compile): 07:41:26.895108 => 07:41:26.910735
+[0m07:41:26.910735 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_transactions_payment_type
+[0m07:41:26.941990 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_transactions_payment_type"
+[0m07:41:26.941990 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:41:27.097560 [debug] [Thread-1 (]: On model.taxitrip.monthly_transactions_payment_type: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_transactions_payment_type"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_transactions_payment_type`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    payment_type,
+    COUNT(*) AS MonthlyTransactions
+FROM 
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime),
+    EXTRACT(MONTH FROM lpep_pickup_datetime),
+    payment_type
+ORDER BY 
+    Year, Month, payment_type
+    );
+  
+[0m07:41:28.744622 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:e4b0093c-7ad3-443e-990a-40109be914b5&page=queryresults
+[0m07:41:31.018137 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_transactions_payment_type (execute): 07:41:26.926369 => 07:41:31.002393
+[0m07:41:31.018137 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '79579017-05d4-4bea-8155-b13642e488a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299406192B0>]}
+[0m07:41:31.018137 [info ] [Thread-1 (]: 2 of 2 OK created sql table model raw.monthly_transactions_payment_type ........ [[32mCREATE TABLE (12.0 rows, 1.0 MiB processed)[0m in 4.12s]
+[0m07:41:31.018137 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_transactions_payment_type
+[0m07:41:31.018137 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:41:31.018137 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m07:41:31.018137 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m07:41:31.018137 [debug] [MainThread]: Connection 'model.taxitrip.monthly_transactions_payment_type' was properly closed.
+[0m07:41:31.018137 [info ] [MainThread]: 
+[0m07:41:31.033654 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 10.46 seconds (10.46s).
+[0m07:41:31.033654 [debug] [MainThread]: Command end result
+[0m07:41:31.064904 [info ] [MainThread]: 
+[0m07:41:31.064904 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:41:31.064904 [info ] [MainThread]: 
+[0m07:41:31.064904 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m07:41:31.080537 [debug] [MainThread]: Command `dbt run` succeeded at 07:41:31.080537 after 12.71 seconds
+[0m07:41:31.080537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002992D248CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002992C3546E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000299401674D0>]}
+[0m07:41:31.080537 [debug] [MainThread]: Flushing usage events
+[0m07:45:19.566870 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175E9E38EC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175E9E386B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175E9E38A70>]}
+
+
+============================== 07:45:19.566870 | 87f46e59-fe9d-484b-81d3-587305d4b7eb ==============================
+[0m07:45:19.566870 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:45:19.566870 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run --full-refresh', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:45:20.648217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175E9E39F40>]}
+[0m07:45:20.710613 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175FCB364E0>]}
+[0m07:45:20.710613 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:45:20.726239 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:45:20.794508 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m07:45:20.794508 [debug] [MainThread]: Partial parsing: added file: taxitrip://models\sources\monthly_trip_distance_rate_code.sql
+[0m07:45:20.794508 [debug] [MainThread]: Partial parsing: updated file: taxitrip://models\sources\monthly_transactions_payment_type.sql
+[0m07:45:20.876711 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175FCBFC920>]}
+[0m07:45:20.892336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175FCD70620>]}
+[0m07:45:20.892336 [info ] [MainThread]: Found 1 seed, 3 models, 1 source, 0 exposures, 0 metrics, 454 macros, 0 groups, 0 semantic models
+[0m07:45:20.892336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175FCF80170>]}
+[0m07:45:20.892336 [info ] [MainThread]: 
+[0m07:45:20.892336 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m07:45:20.892336 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m07:45:20.892336 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:45:21.780020 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m07:45:21.780020 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m07:45:22.700479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175FCAA26C0>]}
+[0m07:45:22.700479 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m07:45:22.716138 [info ] [MainThread]: 
+[0m07:45:22.716138 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m07:45:22.716138 [info ] [Thread-1 (]: 1 of 3 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m07:45:22.727444 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m07:45:22.728442 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m07:45:22.736438 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m07:45:22.737438 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 07:45:22.729442 => 07:45:22.737438
+[0m07:45:22.737438 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m07:45:22.744587 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m07:45:23.708584 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m07:45:23.708584 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    SUM(passenger_count) AS TotalPassengers
+FROM  
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime), EXTRACT(MONTH FROM lpep_pickup_datetime)
+ORDER BY 
+    Year, Month
+    );
+  
+[0m07:45:24.425746 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:75446f91-13e5-498c-8d84-d851a71c1fe0&page=queryresults
+[0m07:45:26.712697 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 07:45:22.737438 => 07:45:26.712697
+[0m07:45:26.728433 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175FCFC06E0>]}
+[0m07:45:26.728433 [info ] [Thread-1 (]: 1 of 3 OK created sql table model raw.monthly_total_passengers ................. [[32mCREATE TABLE (5.0 rows, 1.0 MiB processed)[0m in 4.00s]
+[0m07:45:26.728433 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m07:45:26.728433 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_transactions_payment_type
+[0m07:45:26.728433 [info ] [Thread-1 (]: 2 of 3 START sql table model raw.monthly_transactions_payment_type ............. [RUN]
+[0m07:45:26.728433 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.monthly_total_passengers, now model.taxitrip.monthly_transactions_payment_type)
+[0m07:45:26.728433 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_transactions_payment_type
+[0m07:45:26.728433 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_transactions_payment_type"
+[0m07:45:26.728433 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_transactions_payment_type (compile): 07:45:26.728433 => 07:45:26.728433
+[0m07:45:26.728433 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_transactions_payment_type
+[0m07:45:26.728433 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:45:27.625745 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_transactions_payment_type"
+[0m07:45:27.625745 [debug] [Thread-1 (]: On model.taxitrip.monthly_transactions_payment_type: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_transactions_payment_type"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_transactions_payment_type`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    payment_type,
+    COUNT(*) AS MonthlyTransactions
+FROM 
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime),
+    EXTRACT(MONTH FROM lpep_pickup_datetime),
+    payment_type
+ORDER BY 
+    Year, Month, payment_type
+    );
+  
+[0m07:45:28.353235 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:64adb5f5-3b89-4b95-8d91-ff275cdb8eb2&page=queryresults
+[0m07:45:30.627979 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_transactions_payment_type (execute): 07:45:26.728433 => 07:45:30.626884
+[0m07:45:30.629590 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175FCC1E9F0>]}
+[0m07:45:30.629590 [info ] [Thread-1 (]: 2 of 3 OK created sql table model raw.monthly_transactions_payment_type ........ [[32mCREATE TABLE (12.0 rows, 1.0 MiB processed)[0m in 3.90s]
+[0m07:45:30.629590 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_transactions_payment_type
+[0m07:45:30.629590 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_trip_distance_rate_code
+[0m07:45:30.629590 [info ] [Thread-1 (]: 3 of 3 START sql table model raw.monthly_trip_distance_rate_code ............... [RUN]
+[0m07:45:30.636988 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.monthly_transactions_payment_type, now model.taxitrip.monthly_trip_distance_rate_code)
+[0m07:45:30.636988 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_trip_distance_rate_code
+[0m07:45:30.636988 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_trip_distance_rate_code"
+[0m07:45:30.644155 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_trip_distance_rate_code (compile): 07:45:30.636988 => 07:45:30.644155
+[0m07:45:30.644155 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_trip_distance_rate_code
+[0m07:45:30.651976 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_trip_distance_rate_code"
+[0m07:45:30.651976 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m07:45:30.677448 [debug] [Thread-1 (]: On model.taxitrip.monthly_trip_distance_rate_code: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_trip_distance_rate_code"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_trip_distance_rate_code`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    RatecodeID,
+    SUM(trip_distance) AS MonthlyTripDistance
+FROM 
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime),
+    EXTRACT(MONTH FROM lpep_pickup_datetime),
+    RatecodeID
+ORDER BY 
+    Year, Month, RatecodeID
+    );
+  
+[0m07:45:32.083280 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:b8c7fde5-6348-4bf8-8c5a-58a41cf6dbb6&page=queryresults
+[0m07:45:34.322134 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_trip_distance_rate_code (execute): 07:45:30.644155 => 07:45:34.322134
+[0m07:45:34.324133 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '87f46e59-fe9d-484b-81d3-587305d4b7eb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175FD02EF30>]}
+[0m07:45:34.325131 [info ] [Thread-1 (]: 3 of 3 OK created sql table model raw.monthly_trip_distance_rate_code .......... [[32mCREATE TABLE (11.0 rows, 1.7 MiB processed)[0m in 3.69s]
+[0m07:45:34.326895 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_trip_distance_rate_code
+[0m07:45:34.328149 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m07:45:34.328149 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m07:45:34.328149 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m07:45:34.328149 [debug] [MainThread]: Connection 'model.taxitrip.monthly_trip_distance_rate_code' was properly closed.
+[0m07:45:34.328149 [info ] [MainThread]: 
+[0m07:45:34.328149 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 13.44 seconds (13.44s).
+[0m07:45:34.328149 [debug] [MainThread]: Command end result
+[0m07:45:34.346365 [info ] [MainThread]: 
+[0m07:45:34.346365 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m07:45:34.346365 [info ] [MainThread]: 
+[0m07:45:34.346365 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m07:45:34.346365 [debug] [MainThread]: Command `dbt run` succeeded at 07:45:34.346365 after 14.90 seconds
+[0m07:45:34.346365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175E9770E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175E9E59F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000175E9B29DF0>]}
+[0m07:45:34.346365 [debug] [MainThread]: Flushing usage events
+[0m07:54:25.878653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FAD569A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FAD403320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FAD56A300>]}
+
+
+============================== 07:54:25.881336 | 4fe05811-50bd-4636-9828-a3c203dd2ab9 ==============================
+[0m07:54:25.881336 [info ] [MainThread]: Running with dbt=1.7.13
+[0m07:54:25.882310 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --select test_taxi.tml --full-refresh', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m07:54:29.176140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4fe05811-50bd-4636-9828-a3c203dd2ab9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FC035F620>]}
+[0m07:54:29.241865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4fe05811-50bd-4636-9828-a3c203dd2ab9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FC033CF80>]}
+[0m07:54:29.243192 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m07:54:29.253448 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m07:54:29.288641 [error] [MainThread]: Encountered an error:
+Parsing Error
+  Error reading taxitrip: test_taxi.yml - Runtime Error
+    Syntax error near line 1
+    ------------------------------
+    1  | {% macro calculate_total_fare(distance_in_miles, rate_per_mile, additional_charges) %}
+    2  |     {{ distance_in_miles * rate_per_mile + additional_charges }}
+    3  | {% endmacro %}
+    4  | 
+    
+    Raw Error:
+    ------------------------------
+    while scanning for the next token
+    found character that cannot start any token
+      in "<unicode string>", line 1, column 2
+[0m07:54:29.302472 [debug] [MainThread]: Command `dbt run` failed at 07:54:29.288641 after 3.58 seconds
+[0m07:54:29.302472 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FAD37BE60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FC0426390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FC038DEB0>]}
+[0m07:54:29.303492 [debug] [MainThread]: Flushing usage events
+[0m08:03:47.335403 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAEE1D95E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAEE1D8170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAEDF78EC0>]}
+
+
+============================== 08:03:47.335403 | bb10b95e-4985-4bbc-95f2-ac79e12d582f ==============================
+[0m08:03:47.335403 [info ] [MainThread]: Running with dbt=1.7.13
+[0m08:03:47.338926 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run --full-refresh', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:03:48.489104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAEE1ABB00>]}
+[0m08:03:48.549903 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA8105CF80>]}
+[0m08:03:48.549903 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m08:03:48.549903 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m08:03:49.489094 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m08:03:49.489094 [debug] [MainThread]: Partial parsing: added file: taxitrip://macros\test_taxi..sql
+[0m08:03:49.498914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA81145A00>]}
+[0m08:03:49.508961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA811D72C0>]}
+[0m08:03:49.508961 [info ] [MainThread]: Found 1 seed, 3 models, 1 source, 0 exposures, 0 metrics, 455 macros, 0 groups, 0 semantic models
+[0m08:03:49.508961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAFFDDE360>]}
+[0m08:03:49.508961 [info ] [MainThread]: 
+[0m08:03:49.508961 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m08:03:49.508961 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m08:03:49.508961 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:03:50.426123 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m08:03:50.429867 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:03:51.349549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA811D7620>]}
+[0m08:03:51.349549 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:03:51.349549 [info ] [MainThread]: 
+[0m08:03:51.349549 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m08:03:51.359153 [info ] [Thread-1 (]: 1 of 3 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m08:03:51.361533 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m08:03:51.361533 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m08:03:51.369424 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m08:03:51.369424 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 08:03:51.362479 => 08:03:51.369424
+[0m08:03:51.369424 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m08:03:51.379607 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:03:52.332920 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m08:03:52.332920 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    SUM(passenger_count) AS TotalPassengers
+FROM  
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime), EXTRACT(MONTH FROM lpep_pickup_datetime)
+ORDER BY 
+    Year, Month
+    );
+  
+[0m08:03:53.127654 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:708dc759-80b8-4825-8732-53999f920bfe&page=queryresults
+[0m08:03:55.690227 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 08:03:51.369424 => 08:03:55.690227
+[0m08:03:55.690227 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA81170680>]}
+[0m08:03:55.690227 [info ] [Thread-1 (]: 1 of 3 OK created sql table model raw.monthly_total_passengers ................. [[32mCREATE TABLE (5.0 rows, 1.0 MiB processed)[0m in 4.33s]
+[0m08:03:55.690227 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m08:03:55.690227 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_transactions_payment_type
+[0m08:03:55.690227 [info ] [Thread-1 (]: 2 of 3 START sql table model raw.monthly_transactions_payment_type ............. [RUN]
+[0m08:03:55.690227 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.monthly_total_passengers, now model.taxitrip.monthly_transactions_payment_type)
+[0m08:03:55.690227 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_transactions_payment_type
+[0m08:03:55.699329 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_transactions_payment_type"
+[0m08:03:55.699329 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_transactions_payment_type (compile): 08:03:55.690227 => 08:03:55.699329
+[0m08:03:55.699329 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_transactions_payment_type
+[0m08:03:55.699329 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:03:56.649230 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_transactions_payment_type"
+[0m08:03:56.659378 [debug] [Thread-1 (]: On model.taxitrip.monthly_transactions_payment_type: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_transactions_payment_type"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_transactions_payment_type`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    payment_type,
+    COUNT(*) AS MonthlyTransactions
+FROM 
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime),
+    EXTRACT(MONTH FROM lpep_pickup_datetime),
+    payment_type
+ORDER BY 
+    Year, Month, payment_type
+    );
+  
+[0m08:03:57.489210 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:a00fa8f5-5db3-4ac9-9860-472f573096f3&page=queryresults
+[0m08:03:59.719428 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_transactions_payment_type (execute): 08:03:55.699329 => 08:03:59.719428
+[0m08:03:59.724464 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA811711F0>]}
+[0m08:03:59.724464 [info ] [Thread-1 (]: 2 of 3 OK created sql table model raw.monthly_transactions_payment_type ........ [[32mCREATE TABLE (12.0 rows, 1.0 MiB processed)[0m in 4.03s]
+[0m08:03:59.724464 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_transactions_payment_type
+[0m08:03:59.729473 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_trip_distance_rate_code
+[0m08:03:59.729473 [info ] [Thread-1 (]: 3 of 3 START sql table model raw.monthly_trip_distance_rate_code ............... [RUN]
+[0m08:03:59.729473 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.monthly_transactions_payment_type, now model.taxitrip.monthly_trip_distance_rate_code)
+[0m08:03:59.729473 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_trip_distance_rate_code
+[0m08:03:59.729473 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_trip_distance_rate_code"
+[0m08:03:59.729473 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_trip_distance_rate_code (compile): 08:03:59.729473 => 08:03:59.729473
+[0m08:03:59.729473 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_trip_distance_rate_code
+[0m08:03:59.729473 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:04:00.609363 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_trip_distance_rate_code"
+[0m08:04:00.619060 [debug] [Thread-1 (]: On model.taxitrip.monthly_trip_distance_rate_code: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_trip_distance_rate_code"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_trip_distance_rate_code`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    RatecodeID,
+    SUM(trip_distance) AS MonthlyTripDistance
+FROM 
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime),
+    EXTRACT(MONTH FROM lpep_pickup_datetime),
+    RatecodeID
+ORDER BY 
+    Year, Month, RatecodeID
+    );
+  
+[0m08:04:01.355315 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:0f8c00be-826f-413b-942a-5a1cc7f2f5b3&page=queryresults
+[0m08:04:03.906273 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_trip_distance_rate_code (execute): 08:03:59.729473 => 08:04:03.906273
+[0m08:04:03.907177 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bb10b95e-4985-4bbc-95f2-ac79e12d582f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CA811739B0>]}
+[0m08:04:03.908255 [info ] [Thread-1 (]: 3 of 3 OK created sql table model raw.monthly_trip_distance_rate_code .......... [[32mCREATE TABLE (11.0 rows, 1.7 MiB processed)[0m in 4.18s]
+[0m08:04:03.909515 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_trip_distance_rate_code
+[0m08:04:03.912017 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:04:03.912017 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m08:04:03.913020 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m08:04:03.914062 [debug] [MainThread]: Connection 'model.taxitrip.monthly_trip_distance_rate_code' was properly closed.
+[0m08:04:03.914062 [info ] [MainThread]: 
+[0m08:04:03.914809 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 14.41 seconds (14.41s).
+[0m08:04:03.916805 [debug] [MainThread]: Command end result
+[0m08:04:03.922323 [info ] [MainThread]: 
+[0m08:04:03.924220 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:04:03.924314 [info ] [MainThread]: 
+[0m08:04:03.927315 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m08:04:03.930450 [debug] [MainThread]: Command `dbt run` succeeded at 08:04:03.929390 after 16.73 seconds
+[0m08:04:03.931073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAEDEC9280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAEE1DA210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CAEE04CD70>]}
+[0m08:04:03.931427 [debug] [MainThread]: Flushing usage events
+[0m08:04:48.101176 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1D240B080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1D240AD20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1D240ABD0>]}
+
+
+============================== 08:04:48.101176 | 1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f ==============================
+[0m08:04:48.101176 [info ] [MainThread]: Running with dbt=1.7.13
+[0m08:04:48.108711 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\Hp 14s\\.dbt', 'log_path': 'C:\\Users\\Hp 14s\\Desktop\\WEEKLYTRI\\taxitrip\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --full-refresh', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m08:04:49.224177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1D245AE10>]}
+[0m08:04:49.279452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E518C860>]}
+[0m08:04:49.284086 [info ] [MainThread]: Registered adapter: bigquery=1.7.7
+[0m08:04:49.289399 [debug] [MainThread]: checksum: 6c24e2ee36a42cedd7e5de2827d214776eb7a8e8f425f6d8acb06c31add0afef, vars: {}, profile: , target: , version: 1.7.13
+[0m08:04:49.344120 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 0 files changed.
+[0m08:04:49.344120 [debug] [MainThread]: Partial parsing: added file: taxitrip://macros\test_taxi.sql
+[0m08:04:49.344120 [debug] [MainThread]: Partial parsing: deleted file: taxitrip://macros\test_taxi..sql
+[0m08:04:49.353655 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E4E82E40>]}
+[0m08:04:49.360441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E53632F0>]}
+[0m08:04:49.360441 [info ] [MainThread]: Found 1 seed, 3 models, 1 source, 0 exposures, 0 metrics, 455 macros, 0 groups, 0 semantic models
+[0m08:04:49.360441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E521A9F0>]}
+[0m08:04:49.369138 [info ] [MainThread]: 
+[0m08:04:49.370868 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m08:04:49.370868 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606'
+[0m08:04:49.370868 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:04:51.389333 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_data-fellowship12-421606_raw'
+[0m08:04:51.389333 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:04:52.302174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E51FF1A0>]}
+[0m08:04:52.309193 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m08:04:52.309193 [info ] [MainThread]: 
+[0m08:04:52.309193 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_total_passengers
+[0m08:04:52.309193 [info ] [Thread-1 (]: 1 of 3 START sql table model raw.monthly_total_passengers ...................... [RUN]
+[0m08:04:52.319583 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.taxitrip.monthly_total_passengers'
+[0m08:04:52.320609 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_total_passengers
+[0m08:04:52.329142 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_total_passengers"
+[0m08:04:52.329142 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (compile): 08:04:52.320609 => 08:04:52.329142
+[0m08:04:52.329142 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_total_passengers
+[0m08:04:52.339304 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m08:04:53.242296 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_total_passengers"
+[0m08:04:53.242296 [debug] [Thread-1 (]: On model.taxitrip.monthly_total_passengers: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_total_passengers"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_total_passengers`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    SUM(passenger_count) AS TotalPassengers
+FROM  
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime), EXTRACT(MONTH FROM lpep_pickup_datetime)
+ORDER BY 
+    Year, Month
+    );
+  
+[0m08:04:53.970692 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:f377e39b-6c8e-43fa-a282-411e82c42fe3&page=queryresults
+[0m08:04:56.242323 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_total_passengers (execute): 08:04:52.329142 => 08:04:56.242323
+[0m08:04:56.242323 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E5304680>]}
+[0m08:04:56.242323 [info ] [Thread-1 (]: 1 of 3 OK created sql table model raw.monthly_total_passengers ................. [[32mCREATE TABLE (5.0 rows, 1.0 MiB processed)[0m in 3.92s]
+[0m08:04:56.242323 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_total_passengers
+[0m08:04:56.242323 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_transactions_payment_type
+[0m08:04:56.242323 [info ] [Thread-1 (]: 2 of 3 START sql table model raw.monthly_transactions_payment_type ............. [RUN]
+[0m08:04:56.242323 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.monthly_total_passengers, now model.taxitrip.monthly_transactions_payment_type)
+[0m08:04:56.242323 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_transactions_payment_type
+[0m08:04:56.249432 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_transactions_payment_type"
+[0m08:04:56.249432 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_transactions_payment_type (compile): 08:04:56.242323 => 08:04:56.249432
+[0m08:04:56.249432 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_transactions_payment_type
+[0m08:04:56.249432 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:04:57.183165 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_transactions_payment_type"
+[0m08:04:57.183165 [debug] [Thread-1 (]: On model.taxitrip.monthly_transactions_payment_type: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_transactions_payment_type"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_transactions_payment_type`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    payment_type,
+    COUNT(*) AS MonthlyTransactions
+FROM 
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime),
+    EXTRACT(MONTH FROM lpep_pickup_datetime),
+    payment_type
+ORDER BY 
+    Year, Month, payment_type
+    );
+  
+[0m08:04:57.880377 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:d6cf9875-cbc8-46b3-8595-bda00640b9e4&page=queryresults
+[0m08:05:00.379301 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_transactions_payment_type (execute): 08:04:56.249432 => 08:05:00.379301
+[0m08:05:00.379301 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E5517110>]}
+[0m08:05:00.379301 [info ] [Thread-1 (]: 2 of 3 OK created sql table model raw.monthly_transactions_payment_type ........ [[32mCREATE TABLE (12.0 rows, 1.0 MiB processed)[0m in 4.14s]
+[0m08:05:00.379301 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_transactions_payment_type
+[0m08:05:00.379301 [debug] [Thread-1 (]: Began running node model.taxitrip.monthly_trip_distance_rate_code
+[0m08:05:00.389476 [info ] [Thread-1 (]: 3 of 3 START sql table model raw.monthly_trip_distance_rate_code ............... [RUN]
+[0m08:05:00.389476 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.taxitrip.monthly_transactions_payment_type, now model.taxitrip.monthly_trip_distance_rate_code)
+[0m08:05:00.389476 [debug] [Thread-1 (]: Began compiling node model.taxitrip.monthly_trip_distance_rate_code
+[0m08:05:00.389476 [debug] [Thread-1 (]: Writing injected SQL for node "model.taxitrip.monthly_trip_distance_rate_code"
+[0m08:05:00.389476 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_trip_distance_rate_code (compile): 08:05:00.389476 => 08:05:00.389476
+[0m08:05:00.389476 [debug] [Thread-1 (]: Began executing node model.taxitrip.monthly_trip_distance_rate_code
+[0m08:05:00.397764 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m08:05:01.303883 [debug] [Thread-1 (]: Writing runtime sql for node "model.taxitrip.monthly_trip_distance_rate_code"
+[0m08:05:01.305883 [debug] [Thread-1 (]: On model.taxitrip.monthly_trip_distance_rate_code: /* {"app": "dbt", "dbt_version": "1.7.13", "profile_name": "taxitrip", "target_name": "dev", "node_id": "model.taxitrip.monthly_trip_distance_rate_code"} */
+
+  
+    
+
+    create or replace table `data-fellowship12-421606`.`raw`.`monthly_trip_distance_rate_code`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    EXTRACT(YEAR FROM lpep_pickup_datetime) AS Year,
+    EXTRACT(MONTH FROM lpep_pickup_datetime) AS Month,
+    RatecodeID,
+    SUM(trip_distance) AS MonthlyTripDistance
+FROM 
+    `data-fellowship12-421606`.`raw`.`taxi_tripdata`
+GROUP BY 
+    EXTRACT(YEAR FROM lpep_pickup_datetime),
+    EXTRACT(MONTH FROM lpep_pickup_datetime),
+    RatecodeID
+ORDER BY 
+    Year, Month, RatecodeID
+    );
+  
+[0m08:05:02.021004 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=data-fellowship12-421606&j=bq:US:a7af2030-f27b-4321-997f-6bf9f4cef3fb&page=queryresults
+[0m08:05:04.535616 [debug] [Thread-1 (]: Timing info for model.taxitrip.monthly_trip_distance_rate_code (execute): 08:05:00.389476 => 08:05:04.535616
+[0m08:05:04.540172 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1d20c5b0-f6f4-4fd8-84a2-5aeaba76a85f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E52BD370>]}
+[0m08:05:04.542246 [info ] [Thread-1 (]: 3 of 3 OK created sql table model raw.monthly_trip_distance_rate_code .......... [[32mCREATE TABLE (11.0 rows, 1.7 MiB processed)[0m in 4.15s]
+[0m08:05:04.545208 [debug] [Thread-1 (]: Finished running node model.taxitrip.monthly_trip_distance_rate_code
+[0m08:05:04.547229 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:05:04.548215 [debug] [MainThread]: Connection 'list_data-fellowship12-421606' was properly closed.
+[0m08:05:04.548215 [debug] [MainThread]: Connection 'list_data-fellowship12-421606_raw' was properly closed.
+[0m08:05:04.548215 [debug] [MainThread]: Connection 'model.taxitrip.monthly_trip_distance_rate_code' was properly closed.
+[0m08:05:04.549215 [info ] [MainThread]: 
+[0m08:05:04.550510 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 15.18 seconds (15.18s).
+[0m08:05:04.551530 [debug] [MainThread]: Command end result
+[0m08:05:04.560375 [info ] [MainThread]: 
+[0m08:05:04.561380 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m08:05:04.563800 [info ] [MainThread]: 
+[0m08:05:04.565515 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[0m08:05:04.569067 [debug] [MainThread]: Command `dbt run` succeeded at 08:05:04.569067 after 16.59 seconds
+[0m08:05:04.569067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1D22FD5E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1E5136B40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002E1D1F65430>]}
+[0m08:05:04.570860 [debug] [MainThread]: Flushing usage events
